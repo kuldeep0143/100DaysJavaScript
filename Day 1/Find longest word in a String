@@ -1,0 +1,20 @@
+const longestword = (str) => {
+    if(str.trim("").length === 0) {
+        return false;
+    }
+   let words = str.split(" ");
+   
+  //Solution 1 TC => O(nlogn) && SC => O(n)
+   
+  //  words = words.sort((a,b)=> b.length-a.length);
+  //  return words[0];
+  
+ --------------------------------------------------
+// Solution 2 TC => O(n) && SC => O(n)
+
+     return words.reduce(
+        (accum,currWord)=> (currWord.length > accum.length ? currWord : accum))
+}
+
+
+console.log(longestword("Today is day1 of my #100DaysJavaScript")); 
