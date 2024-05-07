@@ -1,0 +1,19 @@
+const generateHashtag = (str) => {
+    //Check if length is greater than 280 and if length is 0 return false
+    if(str.length > 280 || str.trim().length === 0){
+        return false ;
+    }
+    //Split the string into array
+    str = str.split(" ");
+    // Capitalize the first letter of each word
+    str = str.map((currEle) => 
+        currEle.replace(currEle[0],currEle[0].toUpperCase())
+       )
+       //Join the array into a single string without spaces
+       str= str.join("")
+       //return string with hashtag
+     return `#${str}`
+}
+
+console.log(generateHashtag("Hello i am kuldeep"))
+//OP => #HelloIAmKuldeep
