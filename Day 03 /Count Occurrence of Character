@@ -1,0 +1,34 @@
+
+---------------------------------------------------
+Approach 1  TC => O(n) && SC => O(n)
+---------------------------------------------------
+  const countChar = (str,word) => {
+    str= str.toUpperCase().split("");
+    word = word.toUpperCase();
+    
+    let count = str.reduce((accum,curChar) => {
+        if(curChar === word){
+            accum++;
+        }
+        return accum;
+    },0)
+    return count;
+}
+---------------------------------------------------
+Approach 2 TC => O(n) && SC => O(1)
+---------------------------------------------------
+const countChar = (str, char) => {
+    str = str.toUpperCase();
+    char = char.toUpperCase();
+    let count =0;
+    for(let i = 0;i<str.length;i++){
+        if(str[i] === char) {
+            count++
+        }
+    }
+    return count;
+}
+    
+
+console.log(countChar("Looking like a WoW !!","o"))
+//OP :- 3
