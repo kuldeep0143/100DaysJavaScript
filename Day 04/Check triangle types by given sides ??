@@ -9,6 +9,7 @@ const checkTriangle = (a,b,c) => {
      else if (a != b || b != c) {
          return "scalene"
      }
+
 }
 
 console.log(checkTriangle(45,35,55)) //scalene
