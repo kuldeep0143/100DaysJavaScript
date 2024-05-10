@@ -1,0 +1,13 @@
+const maxNum = (maxNum) => {
+    if(maxNum.length < 1 ) return maxNum;
+    maxNum = maxNum.sort((a,b) => b-a)
+   return maxNum[0];
+   --------------------------------------
+   Approach 2
+   return Math.max(...maxNum)
+   -------------------------------------------
+}
+
+
+
+console.log(maxNum([5,54,9,8664,984,8]))
