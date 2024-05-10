@@ -1,0 +1,8 @@
+const isPalindrome = (str) => {
+    str = str.toLowerCase().replace(/\W/g,""); //Non word are reaplaced by empty 
+    let r_str = str.split("").reverse().join("");
+    return str === r_str ? true : false ;
+}
+
+
+console.log(isPalindrome("pop"))
