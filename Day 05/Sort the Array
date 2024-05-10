@@ -1,0 +1,9 @@
+
+const sortAscending = (arr) => {
+    return arr.sort((a,b) => a-b) //ascending order
+    return arr.sort((a,b) => b-a) //Decending order
+}
+
+
+
+console.log(sortAscending([5,2,1,85,47,6]));
